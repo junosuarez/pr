@@ -1,13 +1,13 @@
 var Q = require('q')
 
-var toArray = Array.prototype.slice.call
+var toArray = Array.prototype.slice
 
 function wrap(fn, returns) {
   if (!returns) {
     // callback is standard (err, result) => void interface
     return function () {
         var self = this
-        var args = toArray(arguments)
+        var args = toArray.call(arguments)
         return Q.promise(function (resolve, reject) {
 
           fn.apply(this, args.concat(function (err, result) {
@@ -26,7 +26,7 @@ function wrap(fn, returns) {
   // callback returns multiple values, accumulate those into an object
   return function () {
     var self = this
-    var args = toArray(arguments)
+    var args = toArray.call(arguments)
     return Q.promise(function (resolve, reject) {
 
       fn.apply(this, args.concat(function(err) {
@@ -34,10 +34,10 @@ function wrap(fn, returns) {
         if (err) {
           reject(err)
         } else {
-          return returns.reduce(function (ret, param, i) {
+          resolve(returns.reduce(function (ret, param, i) {
             ret[param] = cbargs[i+1]
             return ret
-          }, {})
+          }, {}))
         }
       }))
 
