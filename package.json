@@ -3,13 +3,10 @@
   "version": "0.1.0",
   "description": "node builtins wrapped for promises",
   "main": "index.js",
-  "directories": {
-    "test": "test"
-  },
   "scripts": {
     "test": "node node_modules/mocha/bin/mocha"
   },
-  "repository": "",
+  "repository": "git@github.com:jden/pr.git",
   "keywords": [
     "promises",
     "fs",
