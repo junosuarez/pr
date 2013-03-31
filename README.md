@@ -13,7 +13,8 @@ all of node's builtin apis as Promises/A+ - returning functions. Use the core mo
 
 ## modules included
 
-  - fs
+  - [fs](http://nodejs.org/api/fs.html)
+  - [child_process](http://nodejs.org/api/child_process.html)
 
 We're interested in supporting the entire api! Please open a pull request to contribute.
 
