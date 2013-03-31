@@ -1,6 +1,6 @@
 {
   "name": "pr",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "node builtins wrapped for promises",
   "main": "index.js",
   "scripts": {
