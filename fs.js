@@ -1,7 +1,7 @@
-var wrapModule = require('./wrapModule')
+var pr = require('./index')
 var fs = require('fs')
 
-module.exports = wrapModule(fs, [
+module.exports = pr(fs, [
   'rename',
   'ftruncate',
   'truncate',
