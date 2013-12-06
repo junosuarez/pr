@@ -1,4 +1,4 @@
-var Q = require('q')
+var Promise = require('bluebird')
 
 var toArray = Array.prototype.slice
 
@@ -8,7 +8,7 @@ function wrap(fn, returns) {
     return function () {
         var self = this
         var args = toArray.call(arguments)
-        return Q.promise(function (resolve, reject) {
+        return new Promise(function (resolve, reject) {
 
           fn.apply(this, args.concat(function (err, result) {
             if (err) {
@@ -27,7 +27,7 @@ function wrap(fn, returns) {
   return function () {
     var self = this
     var args = toArray.call(arguments)
-    return Q.promise(function (resolve, reject) {
+    return new Promise(function (resolve, reject) {
 
       fn.apply(this, args.concat(function(err) {
         var cbargs = arguments
