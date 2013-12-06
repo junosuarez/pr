@@ -20,7 +20,7 @@ function wrap(fn, returns) {
 
         })
 
-      }    
+      }
   }
 
   // callback returns multiple values, accumulate those into an object
@@ -43,7 +43,7 @@ function wrap(fn, returns) {
 
     })
   }
-  
+
 }
 
 function clone (obj) {

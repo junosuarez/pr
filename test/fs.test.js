@@ -76,7 +76,7 @@ describe('fs', function () {
     existsSync: Function,
     createReadStream: Function,
     createWriteStream: Function
-    
+
 
 
   })
