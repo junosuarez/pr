@@ -3,13 +3,15 @@ node builtins wrapped for promises
 
 all of node's builtin apis as Promises/A+ - returning functions. Use the core module APIs you know without the impedence mismatch of adapting them to promises yourself.
 
+[![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
+
 ## installation
 
     $ npm install pr
 
 ## usage
 
-require an
+require any builtin module with `pr/` before it
 
 ## example
 
